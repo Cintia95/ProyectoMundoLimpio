@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArticuloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class);
+
+Route::get('articulos', [ArticuloController::class, 'administrar'])->name('articulos.administrar');
+
+Route::get('articulos/cargar', [ArticuloController::class, 'cargar'])->name('articulos.cargar');
+
+Route::get('articulos/modificar/{id}', [ArticuloController::class, 'modificar'])->name('articulos.modificar');
