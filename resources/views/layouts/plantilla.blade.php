@@ -29,13 +29,13 @@ nav {
 	overflow: hidden; 
 	padding: 10px 10px 20px 10px; 
 }
-a {
+nav a {
     font-size: 18px;
     padding: 10px 15px;
 }
-a:link {text-decoration: none; color: #ffffff }
-a:hover {color: #ffffff; background: #4167c7; text-decoration: none }
-a:visited {color: #ffffff;  text-decoration: none }
+nav a:link {text-decoration: none; color: #ffffff }
+nav a:hover {color: #ffffff; background: #4167c7; text-decoration: none }
+nav a:visited {color: #ffffff;  text-decoration: none }
     </style>
 </head>
 

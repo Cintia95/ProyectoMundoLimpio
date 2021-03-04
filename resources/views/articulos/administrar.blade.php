@@ -16,16 +16,18 @@
 			<th>Acciones</th>
 		</tr>
 		@foreach ($articulos as $articulo)
-			@if ({{$articulo->condicion}})
-				<td>{{$articulo->nombre}}</td>
-				<td>{{$articulo->descripcion}}</td>
-				<td>{{$articulo->cantidad}}</td>
-				<td>{{$articulo->precio}}</td>
-				<td>{{$articulo->imagen}}</td>
-				{{-- botones modificar y borrar --}}
-				<td></td>
-			@endif<tr>
-			</tr>
+			@if (($articulo->condicion)==1)
+				<tr>	
+					<td>{{$articulo->nombre}}</td>
+					<td>{{$articulo->descripcion}}</td>
+					<td>{{$articulo->cantidad}}</td>
+					<td>{{$articulo->precio}}</td>
+					<td>{{$articulo->imagen}}</td>
+					{{-- botones modificar y borrar --}}
+					<td></td>
+				</tr>
+			@endif
+			
 		@endforeach
 
 	</table>

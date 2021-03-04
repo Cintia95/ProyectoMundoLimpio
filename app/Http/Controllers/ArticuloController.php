@@ -9,7 +9,7 @@ class ArticuloController extends Controller
 {
     public function administrar(){
         
-        $articulos= Articulo::orderBy('id', 'desc')->paginate();
+        $articulos= Articulo::paginate();
 
         return view('articulos.administrar', compact('articulos'));
     }
