@@ -21,4 +21,6 @@ Route::get('articulos', [ArticuloController::class, 'administrar'])->name('artic
 
 Route::get('articulos/cargar', [ArticuloController::class, 'cargar'])->name('articulos.cargar');
 
+Route::post('articulos', [ArticuloController::class, 'store'])->name('articulos.store');
+
 Route::get('articulos/modificar/{id}', [ArticuloController::class, 'modificar'])->name('articulos.modificar');

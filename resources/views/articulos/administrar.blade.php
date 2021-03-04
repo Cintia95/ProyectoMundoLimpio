@@ -16,7 +16,7 @@
 			<th>Acciones</th>
 		</tr>
 		@foreach ($articulos as $articulo)
-			<tr>
+			@if ({{$articulo->condicion}})
 				<td>{{$articulo->nombre}}</td>
 				<td>{{$articulo->descripcion}}</td>
 				<td>{{$articulo->cantidad}}</td>
@@ -24,6 +24,7 @@
 				<td>{{$articulo->imagen}}</td>
 				{{-- botones modificar y borrar --}}
 				<td></td>
+			@endif<tr>
 			</tr>
 		@endforeach
 
