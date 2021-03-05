@@ -37,7 +37,26 @@ a:link {text-decoration: none}
 nav a:link {text-decoration: none; color: #ffffff }
 nav a:hover {color: #ffffff; background: #4167c7; text-decoration: none }
 nav a:visited {color: #ffffff;  text-decoration: none }
-    </style>
+   
+h2 {
+	text-align: center;
+	color: #4167c7;
+}
+
+table {
+  margin: 0 0 40px 0;
+  width: 80%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  display: table;
+  border-collapse: separate; border-spacing: 10px;}
+tr {
+  display: table-row;
+  background: #f6f6f6;
+  }
+td {
+	text-align: center;
+}
+   </style>
 </head>
 
 <body>
