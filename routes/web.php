@@ -23,4 +23,6 @@ Route::get('articulos/cargar', [ArticuloController::class, 'cargar'])->name('art
 
 Route::post('articulos', [ArticuloController::class, 'store'])->name('articulos.store');
 
-Route::get('articulos/modificar/{id}', [ArticuloController::class, 'modificar'])->name('articulos.modificar');
+Route::get('articulos/{articulo}/editar', [ArticuloController::class, 'editar'])->name('articulos.editar');
+
+Route::put('articulos/{articulo}', [ArticuloController::class, 'actualizar'])->name('articulos.actualizar');

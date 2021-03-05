@@ -4,7 +4,7 @@
 
 	<h1>Administrar Existencias</h1>
 	
-	<a href="{{route('articulos.cargar')}}">Cargar Artículo</a>
+	<a href="{{route('articulos.cargar')}}">Cargar Artículo</a> <br>
 	
 	<table>
 		<tr>
@@ -16,15 +16,14 @@
 			<th>Acciones</th>
 		</tr>
 		@foreach ($articulos as $articulo)
-			@if (($articulo->condicion)==1)
+			@if ($articulo->condicion)
 				<tr>	
 					<td>{{$articulo->nombre}}</td>
 					<td>{{$articulo->descripcion}}</td>
 					<td>{{$articulo->cantidad}}</td>
 					<td>{{$articulo->precio}}</td>
 					<td>{{$articulo->imagen}}</td>
-					{{-- botones modificar y borrar --}}
-					<td></td>
+					<td><a href="{{route('articulos.editar', $articulo->id)}}">Editar</a><a href="">Borrar</a></td>
 				</tr>
 			@endif
 			

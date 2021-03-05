@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Mundo Limpio Artículos de limpieza</title>
+    <title>Mundo Limpio</title>
     <link rel="icon" href="favicon.ico">
     <style>
 body {
@@ -33,6 +33,7 @@ nav a {
     font-size: 18px;
     padding: 10px 15px;
 }
+a:link {text-decoration: none}
 nav a:link {text-decoration: none; color: #ffffff }
 nav a:hover {color: #ffffff; background: #4167c7; text-decoration: none }
 nav a:visited {color: #ffffff;  text-decoration: none }

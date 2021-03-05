@@ -14,7 +14,7 @@ class Articulos extends Migration
     public function up()
     {
         Schema::create('articulos', function (Blueprint $table) {
-            $table->bigIncrements('idArticulo');
+            $table->bigIncrements('id');
             $table->string('nombre',50);
             $table->text('descripcion');
             $table->integer('cantidad');
