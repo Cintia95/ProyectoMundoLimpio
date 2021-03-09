@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Articulo;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreArticulo;
 
 class ArticuloController extends Controller
 {
@@ -18,17 +19,9 @@ class ArticuloController extends Controller
         return view('articulos.formulario-carga');
     }
 
-    public function store(Request $request){
-        $articulo = new Articulo();
-
-        $articulo->nombre = $request->nombre;
-        $articulo->descripcion = $request->descripcion;
-        $articulo->cantidad = $request->cantidad;
-        $articulo->precio = $request->precio;
-        $articulo->imagen = $request->imagen;
-        $articulo->condicion = 1;
-
-        $articulo-> save();
+    public function store(StoreArticulo $request){
+              
+        $articulo = Articulo::create($request->all());
 
         return redirect()->route('articulos.administrar');
     }
@@ -38,8 +31,8 @@ class ArticuloController extends Controller
         return view('articulos.formulario-modificacion', compact('articulo'));
     }
 
-    public function actualizar(Request $request, Articulo $articulo){
-       
+    public function actualizar(StoreArticulo $request, Articulo $articulo){
+        
         $articulo->nombre = $request->nombre;
         $articulo->descripcion = $request->descripcion;
         $articulo->cantidad = $request->cantidad;
