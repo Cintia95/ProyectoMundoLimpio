@@ -33,15 +33,10 @@ class ArticuloController extends Controller
 
     public function actualizar(StoreArticulo $request, Articulo $articulo){
         
-        $articulo->nombre = $request->nombre;
-        $articulo->descripcion = $request->descripcion;
-        $articulo->cantidad = $request->cantidad;
-        $articulo->precio = $request->precio;
-        $articulo->imagen = $request->imagen;
-        $articulo->condicion = 1;
-
-        $articulo-> save();
+        $articulo->update($request->all());
 
         return redirect()->route('articulos.administrar');
     }
+
+   
 }

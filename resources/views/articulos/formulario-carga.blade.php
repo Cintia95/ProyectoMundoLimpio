@@ -48,7 +48,7 @@
         <br>
         <label>
             Precio: <br>
-            <input type="number" step="0.01" name="precio" placeholder="Precio por unidad" value="{{old('precio')}}">
+            $<input type="number" step="0.01" name="precio" placeholder="Precio por unidad" value="{{old('precio')}}">
         </label>
 
         @error('precio')
@@ -60,7 +60,8 @@
         <br>
         <label>
             Imagen: <br>
-            <input type="file" name="imagen" accept=".jpg,.png">
+            <input type="text" name="imagen" placeholder="URL de la imagen" value="{{old('imagen')}}">
+            {{-- <input type="file" name="" accept=".jpg,.png"> --}}
         </label>
 
         @error('imagen')

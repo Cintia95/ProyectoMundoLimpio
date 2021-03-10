@@ -4,7 +4,7 @@
 
 	<h2>Administrar Existencias</h2>
 	
-	<a href="{{route('articulos.cargar')}}">Cargar Artículo</a> <br><br>
+	<a href="{{route('articulos.cargar')}}" class="btn">Cargar Artículo</a> <br><br>
 	
 	<table>
 		<tr>
@@ -21,10 +21,10 @@
 					<td>{{$articulo->nombre}}</td>
 					<td>{{$articulo->descripcion}}</td>
 					<td>{{$articulo->cantidad}}</td>
-					<td>{{$articulo->precio}}</td>
-					<td>{{$articulo->imagen}}</td>
-					<td><a href="{{route('articulos.editar', $articulo->id)}}">Editar</a></td>
-					<td><a href="">Borrar</a></td>
+					<td>${{$articulo->precio}}</td>
+					<td><img src="{{$articulo->imagen}}" height="40px"></td>
+					<td><a href="{{route('articulos.editar', $articulo->id)}}" class="btn">Editar</a></td>
+					<td><a href="" class="btn">Borrar</a></td>
 				</tr>
 			@endif
 			
