@@ -46,6 +46,15 @@ nav a:visited {color: #ffffff;  text-decoration: none }
     color: #ffffff;
 }  
 
+.btna {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #0221aa;
+    background-color: #4167c7;
+    color: #ffffff;
+}  
+
 
 h2 {
 	text-align: center;

@@ -38,5 +38,13 @@ class ArticuloController extends Controller
         return redirect()->route('articulos.administrar');
     }
 
-   
+    public function eliminar(Request $request, Articulo $articulo){
+        
+        $articulo->condicion = 0;
+
+        $articulo->save();
+
+        return redirect()->route('articulos.administrar');
+    }
+
 }

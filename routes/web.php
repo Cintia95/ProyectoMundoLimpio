@@ -26,3 +26,5 @@ Route::post('articulos', [ArticuloController::class, 'store'])->name('articulos.
 Route::get('articulos/{articulo}/editar', [ArticuloController::class, 'editar'])->name('articulos.editar');
 
 Route::put('articulos/{articulo}', [ArticuloController::class, 'actualizar'])->name('articulos.actualizar');
+
+Route::put('articulos/{articulo}/eliminar', [ArticuloController::class, 'eliminar'])->name('articulos.eliminar');
