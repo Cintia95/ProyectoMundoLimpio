@@ -29,7 +29,7 @@
 						<form action="{{route('articulos.eliminar', $articulo)}}" method="POST">
 							@csrf
 							@method('PUT')
-							<button type="submit" class="btna"><img src="https://www.flaticon.es/svg/vstatic/svg/1214/1214926.svg?token=exp=1615414948~hmac=ac9006c6f6b2a3f41eaaabcef5ad8357" height="25px"></button>
+							<button type="submit" class="btna" onclick="return ConfirmDelete()"><img src="https://www.flaticon.es/svg/vstatic/svg/1214/1214926.svg?token=exp=1615414948~hmac=ac9006c6f6b2a3f41eaaabcef5ad8357" height="25px"></button>
 						</form>
 					</td>
 				</tr>

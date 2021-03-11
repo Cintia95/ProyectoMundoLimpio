@@ -47,8 +47,8 @@ nav a:visited {color: #ffffff;  text-decoration: none }
 }  
 
 .btna {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 5px;
     border: 1px solid #0221aa;
     background-color: #4167c7;
@@ -74,6 +74,11 @@ tr {
 td {
 	text-align: center;
 }
+
+.active {
+    font-weight: bold;
+    background-color: #0221aa
+}
    </style>
 </head>
 
@@ -84,7 +89,7 @@ td {
 			<a href="/">Inicio</a>
 			<a href="/comprar">Productos</a>
             <a href="/carrito">Carrito</a>
-			<a href="{{route('articulos.administrar')}}">Administrar</a>
+			<a href="{{route('articulos.administrar')}}" class="{{request()->routeIs('articulos.administrar') ? 'active' : ''}}">Administrar</a>
 			<a href="/login">Iniciar sesión</a>	
         </nav>
     </header>
@@ -97,4 +102,16 @@ td {
 
 
 </body>
+<script type="text/javascript">
+    function ConfirmDelete(){
+        var respuesta = confirm("¿Está seguro que desea eliminar este artículo?");
+        if (respuesta == true){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+   
+</script>
 </html>

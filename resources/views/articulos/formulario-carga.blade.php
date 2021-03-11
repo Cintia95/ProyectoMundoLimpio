@@ -71,6 +71,7 @@
         @enderror
 
         <br><br>
+        <input type="button" onclick="history.back()" name="Cancelar" value="Cancelar">
         <button type="submit">Guardar datos</button>
 
 

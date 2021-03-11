@@ -73,9 +73,21 @@
         @enderror
 
         <br><br>
-        <button type="submit">Actualizar datos</button>
+        <input type="button" onclick="history.back()" name="Cancelar" value="Cancelar">
+        <button type="submit" onclick="return ConfirmEdit()">Actualizar datos</button>
 
 
     </form>
 </body>
+<script>
+     function ConfirmEdit(){
+        var respuesta = confirm("¿Está seguro que desea guardar los cambios?");
+        if (respuesta == true){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
 </html>
