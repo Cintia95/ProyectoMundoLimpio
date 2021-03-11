@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticuloController;
 
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +31,7 @@ Route::get('articulos/{articulo}/editar', [ArticuloController::class, 'editar'])
 Route::put('articulos/{articulo}', [ArticuloController::class, 'actualizar'])->name('articulos.actualizar');
 
 Route::put('articulos/{articulo}/eliminar', [ArticuloController::class, 'eliminar'])->name('articulos.eliminar');
+
+Route::get('contactanos', function () {
+    
+});
