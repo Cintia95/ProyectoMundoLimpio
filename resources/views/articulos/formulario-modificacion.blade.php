@@ -36,7 +36,7 @@ form input[type="number"]{
 
 #cancel, #ok {
 	padding:8px 16px;
-    margin: 10px;
+    margin: 10px 5px;
 	border-radius:5px;
 	color:#0000a7;
 	background-color:#ffffff;

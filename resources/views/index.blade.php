@@ -15,22 +15,29 @@
 		<h2>Sección Principal</h2>
 	</div>
 	<div id="terciario">
-		<form>
+		<form action="{{route('contactanos')}}" method="POST">
+			@csrf
 			<h2>Contáctanos</h2>
 			<label>
 				Nombre: <br>
-				<input type="text" name="nombre">
+				<input type="text" name="nombre" required>
 			</label> <br>
 			<label>
 				Correo: <br>
-				<input type="email" name="correo">
+				<input type="email" name="correo" required>
 			</label> <br>
 			<label>
 				Mensaje: <br>
-				<textarea name="mensaje" rows="4"></textarea>
+				<textarea name="mensaje" rows="4" required></textarea>
 			</label>
 			<button type="submit">Enviar mensaje</button>
 		</form>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</div>
+	@if (session('info'))
+		<script>
+			alert("{{session('info')}}");
+		</script>
+		
+	@endif
 @endsection

@@ -23,7 +23,7 @@ class ArticuloController extends Controller
               
         $articulo = Articulo::create($request->all());
 
-        return redirect()->route('articulos.administrar');
+        return redirect()->route('articulos.administrar')->with('info', 'Artículo cargado correctamente');
     }
   
     public function editar(Articulo $articulo){
@@ -35,7 +35,7 @@ class ArticuloController extends Controller
         
         $articulo->update($request->all());
 
-        return redirect()->route('articulos.administrar');
+        return redirect()->route('articulos.administrar')->with('info', 'Artículo modificado correctamente');
     }
 
     public function eliminar(Request $request, Articulo $articulo){

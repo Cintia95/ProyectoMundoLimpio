@@ -39,6 +39,11 @@
 
 	</table>
 	</div>
-
+	@if (session('info'))
+		<script>
+			alert("{{session('info')}}");
+		</script>
+		
+	@endif
 	
 @endsection
