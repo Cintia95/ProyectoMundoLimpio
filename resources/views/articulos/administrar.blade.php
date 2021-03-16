@@ -3,9 +3,9 @@
 @section('contenido')
 
 	<h2>Administrar Existencias</h2>
-	
-	<a href="{{route('articulos.cargar')}}" class="btn">Cargar Artículo</a> <br><br>
-	
+	<div class="botones"><a href="{{route('articulos.cargar')}}" class="btn">Cargar Artículo</a> </div>
+	<br>
+	<div class="table">
 	<table>
 		<tr>
 			<th>Nombre</th>
@@ -38,6 +38,7 @@
 		@endforeach
 
 	</table>
+	</div>
 
 	
 @endsection

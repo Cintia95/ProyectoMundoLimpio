@@ -6,8 +6,10 @@
     <link rel="icon" href="favicon.ico">
     <style>
 body {
+    margin: 0px;
+    padding: 0px;
 	background-image: url(fondo.jpg);
-	background-size: cover
+	background-size: cover;
 }
 h1 {
 	font-size: 35px;
@@ -23,6 +25,8 @@ header{
     border-radius: 15px 15px 15px 15px;  
 	border: 2px solid #5878ca;
     background: #889ccf;
+    position: sticky;
+    top: 0;
 }
 nav {
 	font-weight: 400; 
@@ -44,6 +48,12 @@ nav a:visited {color: #ffffff;  text-decoration: none }
     border: 1px solid #0221aa;
     background-color: #4167c7;
     color: #ffffff;
+}
+.botones {
+    width: 25%;
+    margin-right: 75%;
+    display: flex;
+    justify-content:flex-end;
 }  
 
 .btna {
@@ -63,10 +73,15 @@ h2 {
 
 table {
   margin: 0 0 40px 0;
-  width: 80%;
+  width: 100%;
+  max-width: 800px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   display: table;
   }
+.table{
+    display: flex;
+    justify-content:center;
+}
 tr {
   display: table-row;
   background: #f6f6f6;
@@ -79,6 +94,47 @@ td {
     font-weight: bold;
     background-color: #0221aa
 }
+#principal {
+    width: 56.4%;
+    float: left;
+    padding: 0.5em;
+}
+#secundario {
+    width: 20%;
+    float: left;
+    padding: 0.5em;
+    background-color: #b7cafa;
+}
+#secundario h3 {
+    color: #000e4b;
+    text-align: center;
+}
+#terciario {
+    background-color: #000e4b;
+    width: 20%;
+    float: left;
+    padding: 0.5em;
+}
+label {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    color: #ffffff;
+}
+input, textarea {
+    margin: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+button {
+    margin-left: 30%;
+    padding: 3px;
+    background-color: #bad5fc;
+    color: #000e4b;
+    border: 0px;
+    font-weight: bold;
+}
    </style>
 </head>
 
@@ -86,7 +142,7 @@ td {
 	<header>
         <h1>Artículos de limpieza Mundo Limpio</h1>
 	    <nav>
-			<a href="/">Inicio</a>
+			<a href="{{route('inicio')}}" class="{{request()->routeIs('inicio') ? 'active' : ''}}">Inicio</a>
 			<a href="/comprar">Productos</a>
             <a href="/carrito">Carrito</a>
 			<a href="{{route('articulos.administrar')}}" class="{{request()->routeIs('articulos.administrar') ? 'active' : ''}}">Administrar</a>

@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Contactanos</h1>
+    <h1>Correo electrónico</h1>
+    <p>Este es un correo de prueba</p>
 </body>
 </html>
