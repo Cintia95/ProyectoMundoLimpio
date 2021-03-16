@@ -64,9 +64,9 @@ textarea{
     </style>
 </head>
 <body>
-	<h2>Editar Artículo</h2>
+	
     <form action="{{route('articulos.actualizar', $articulo)}}" method="POST">
-        
+        <h2>Editar Artículo</h2> 
         @csrf
 
         @method('PUT')
