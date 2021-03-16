@@ -33,3 +33,5 @@ Route::put('articulos/{articulo}', [ArticuloController::class, 'actualizar'])->n
 Route::put('articulos/{articulo}/eliminar', [ArticuloController::class, 'eliminar'])->name('articulos.eliminar');
 
 Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos');
+
+Route::get('comprar', [ArticuloController::class, 'mostrar'])->name('articulos.productos');

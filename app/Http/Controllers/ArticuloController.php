@@ -47,4 +47,11 @@ class ArticuloController extends Controller
         return redirect()->route('articulos.administrar');
     }
 
+    public function mostrar(){
+        
+        $articulos= Articulo::orderBy('id', 'desc')->paginate();
+
+        return view('articulos.productos', compact('articulos'));
+    }
+
 }

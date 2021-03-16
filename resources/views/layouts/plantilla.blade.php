@@ -135,6 +135,44 @@ button {
     border: 0px;
     font-weight: bold;
 }
+#productos {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 100px;
+}
+.tarjeta {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    justify-content: center;
+    flex-direction: column;
+    border: #0a33e9 2px solid;
+    margin: 20px;
+    padding: 5px;
+} 
+.tarjeta img {
+    max-width: 50%;
+    max-height: 50%;
+}
+.tarjeta img, .tarjeta h3, .tarjeta h4, .tarjeta p, .tarjeta #añadir {
+    display:flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    max-width:90%;
+}
+#añadir {
+    display: block;
+}
+#añadir input{
+    max-width: 30px;
+    height: 30px;
+    display: inline;
+}
+#añadir button{
+   display: inline;
+}
    </style>
 </head>
 
@@ -143,7 +181,7 @@ button {
         <h1>Artículos de limpieza Mundo Limpio</h1>
 	    <nav>
 			<a href="{{route('inicio')}}" class="{{request()->routeIs('inicio') ? 'active' : ''}}">Inicio</a>
-			<a href="/comprar">Productos</a>
+			<a href="{{route('articulos.productos')}}" class="{{request()->routeIs('articulos.productos') ? 'active' : ''}}">Productos</a>
             <a href="/carrito">Carrito</a>
 			<a href="{{route('articulos.administrar')}}" class="{{request()->routeIs('articulos.administrar') ? 'active' : ''}}">Administrar</a>
 			<a href="/login">Iniciar sesión</a>	

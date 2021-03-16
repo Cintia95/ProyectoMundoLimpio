@@ -7,7 +7,7 @@
 	<h3>Creado por:</h3>
 	<h3>Andino Villalba, Rocío Belén</h3>
 	<h3>Barrios, Mariana Victoria</h3>
-	<h3>Vázquez, Judianna</h3>
+	<h3>Vázquez, Judianna Yeltsian</h3>
 	<h3>Wdoviak, Cintia Belen</h3>
 	<br><br><br><br><br><br><br><br><br><br><br><br>
 	</div>
