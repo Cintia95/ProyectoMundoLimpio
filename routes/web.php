@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticuloController;
 use App\Http\Controllers\ContactanosController;
+use App\Http\Controllers\UsuarioController;
 
 
 
@@ -35,3 +36,12 @@ Route::put('articulos/{articulo}/eliminar', [ArticuloController::class, 'elimina
 Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos');
 
 Route::get('comprar', [ArticuloController::class, 'mostrar'])->name('articulos.productos');
+
+Route::get('usuario/registro', [UsuarioController::class, 'crear'])->name('usuario.crear');
+
+Route::post('usuario/registro', [UsuarioController::class, 'store'])->name('usuario.store');
+
+Route::get('usuario/login', [UsuarioController::class, 'login'])->name('usuario.login');
+
+Route::post('usuario/login', [UsuarioController::class, 'log'])->name('usuario.log');
+

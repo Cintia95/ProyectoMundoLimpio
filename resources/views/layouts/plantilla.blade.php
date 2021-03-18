@@ -95,15 +95,17 @@ td {
     background-color: #0221aa
 }
 #principal {
-    width: 56.4%;
+    width: 60%;
     float: left;
     padding: 0.5em;
+    box-sizing: border-box;
 }
 #secundario {
     width: 20%;
     float: left;
     padding: 0.5em;
     background-color: #b7cafa;
+    box-sizing: border-box;
 }
 #secundario h3 {
     color: #000e4b;
@@ -114,6 +116,7 @@ td {
     width: 20%;
     float: left;
     padding: 0.5em;
+    box-sizing: border-box;
 }
 label {
     margin-left: 15%;
@@ -173,7 +176,20 @@ button {
 #añadir button{
    display: inline;
 }
-   </style>
+#btop, #bbottom {
+    padding: 20px;
+    text-align: center;
+}
+#btop a{
+    margin: 0 10px;
+    padding: 5px;
+    background-color: #4167c7;
+
+}
+#btop a:link, #btop a:hover, #btop a:visited {text-decoration: none; color: #ffffff }
+
+</style>
+   @yield('estilo')
 </head>
 
 <body>
@@ -184,7 +200,7 @@ button {
 			<a href="{{route('articulos.productos')}}" class="{{request()->routeIs('articulos.productos') ? 'active' : ''}}">Productos</a>
             <a href="/carrito">Carrito</a>
 			<a href="{{route('articulos.administrar')}}" class="{{request()->routeIs('articulos.administrar') ? 'active' : ''}}">Administrar</a>
-			<a href="/login">Iniciar sesión</a>	
+			<a href="{{route('usuario.login')}}" class="{{request()->routeIs('usuario.login') ? 'active' : ''}}">Iniciar sesión</a>	
         </nav>
     </header>
 
@@ -206,6 +222,15 @@ button {
             return false;
         }
     }
+    function ComprobarClave(){
+        var p1 = document.getElementById('p1');
+        var p2 = document.getElementById('p2');
+
+        if (p1 == p2){
+            return true;
+        }else {
+            return false;
+        }
    
 </script>
 </html>
