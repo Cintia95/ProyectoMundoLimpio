@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Mundo Limpio</title>
     <link rel="icon" href="favicon.ico">
+    
     <style>
 body {
     margin: 0px;
@@ -11,7 +12,7 @@ body {
 	background-image: url(fondo.jpg);
 	background-size: cover;
 }
-h1 {
+/* h1 {
 	font-size: 35px;
     color: #ffffff;  
 	font-weight: 400; 
@@ -19,20 +20,20 @@ h1 {
 	margin: 0 0; 
 	overflow: hidden; 
 	padding: 20px 0 10px 0; 
-	}
-header{
+	} */
+/* header{
 	text-align: center; 
     border-radius: 15px 15px 15px 15px;  
 	border: 2px solid #5878ca;
     background: #889ccf;
     position: sticky;
     top: 0;
-}
-nav {
+} */
+/* nav {
 	font-weight: 400; 
 	overflow: hidden; 
 	padding: 10px 10px 20px 10px; 
-}
+} */
 nav a {
     font-size: 18px;
     padding: 10px 15px;
@@ -60,8 +61,8 @@ nav a:visited {color: #ffffff;  text-decoration: none }
     width: 35px;
     height: 35px;
     border-radius: 5px;
-    border: 1px solid #0221aa;
-    background-color: #4167c7;
+    border: 1px solid #171718;
+    background-color: #7c7d80;
     color: #ffffff;
 }  
 
@@ -94,14 +95,15 @@ td {
     font-weight: bold;
     background-color: #0221aa
 }
-#principal {
-    width: 60%;
+/* #principal {
+    width: 30%;
     float: left;
     padding: 0.5em;
     box-sizing: border-box;
-}
+} */
 #secundario {
-    width: 20%;
+    width: 50%;
+    margin: 5%;
     float: left;
     padding: 0.5em;
     background-color: #b7cafa;
@@ -113,7 +115,8 @@ td {
 }
 #terciario {
     background-color: #000e4b;
-    width: 20%;
+    margin: 5%;
+    width: 30%;
     float: left;
     padding: 0.5em;
     box-sizing: border-box;
@@ -189,19 +192,38 @@ button {
 #btop a:link, #btop a:hover, #btop a:visited {text-decoration: none; color: #ffffff }
 
 </style>
+<link rel="icon" type="icon/png" href="https://i.pinimg.com/736x/29/f9/25/29f925004e1ec7b3f3dcefb540d7d6bf.jpg">
+<link rel="stylesheet" type="text/css" href="{{ asset('Mundo.css') }}">
    @yield('estilo')
 </head>
 
 <body>
-	<header>
-        <h1>Artículos de limpieza Mundo Limpio</h1>
+	<header class="header">
+        <div class="container logo-nav-container">
+			<a href="#"class="logo">Mundo Limpio</a>
+			<nav class="navegation">
+			<ul>
+				<li><a href="{{route('inicio')}}" class="{{request()->routeIs('inicio') ? 'active' : ''}}">Inicio</li></a>
+				{{-- <li><a href="#">Acerca</li></a> --}}
+				<li><a href="{{route('articulos.administrar')}}" class="{{request()->routeIs('articulos.administrar') ? 'active' : ''}}">Productos</a>
+					{{-- <ul>
+						<li><a href="#">Promos</li></a>
+						<li><a href="#">Hogar</li></a>
+						<li><a href="#">Empresas</li></a>
+					</ul> --}}
+				</li>
+				<li><a href="{{route('contactanos')}}" class="{{request()->routeIs('contactanos') ? 'active' : ''}}">Contactanos</li></a>
+			</ul>
+			</nav>
+		</div>
+        {{-- <h1>Artículos de limpieza Mundo Limpio</h1>
 	    <nav>
 			<a href="{{route('inicio')}}" class="{{request()->routeIs('inicio') ? 'active' : ''}}">Inicio</a>
 			<a href="{{route('articulos.productos')}}" class="{{request()->routeIs('articulos.productos') ? 'active' : ''}}">Productos</a>
             <a href="/carrito">Carrito</a>
 			<a href="{{route('articulos.administrar')}}" class="{{request()->routeIs('articulos.administrar') ? 'active' : ''}}">Administrar</a>
 			<a href="{{route('usuario.login')}}" class="{{request()->routeIs('usuario.login') ? 'active' : ''}}">Iniciar sesión</a>	
-        </nav>
+        </nav> --}}
     </header>
 
     @yield('contenido')

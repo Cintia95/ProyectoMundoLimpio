@@ -45,3 +45,5 @@ Route::get('usuario/login', [UsuarioController::class, 'login'])->name('usuario.
 
 Route::post('usuario/login', [UsuarioController::class, 'log'])->name('usuario.log');
 
+Route::get('contactanos', [UsuarioController::class, 'contactanos'])->name('contactanos');
+

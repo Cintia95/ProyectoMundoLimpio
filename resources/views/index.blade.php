@@ -1,43 +1,24 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-	<div id="secundario">
-	<h2>Proyecto final del curso:</h2>
-	<h2>"De 0 a 100: programación Web Fullstack"</h2>
-	<h3>Creado por:</h3>
-	<h3>Andino Villalba, Rocío Belén</h3>
-	<h3>Barrios, Mariana Victoria</h3>
-	<h3>Vázquez, Judianna Yeltsian</h3>
-	<h3>Wdoviak, Cintia Belen</h3>
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+<main class="main">
+	<div class="container">
+		<h1>Bienvenidos</h1>
+		<p> 
+			Reducir el riesgo de exposición al COVID-19 al limpiar y desinfectar es una necesidad fundamental del hogar y de las empresas.
+			Para desinfectar eficientemente un espacio y volverlo un lugar seguro, no hay un solo producto. Cada uno de estos, funciona mejor de acuerdo al lugar, el tipo de superficie, el nivel de exposición, entre otros.
+			 Esto es lo que hace que Mundo Limpio brinde un servicio profesional diferencial que da tranquilidad a los usuarios de todos los espacios, utilizando los productos adecuados para el lugar correcto, aplicándolos en la dilución y mediante el procedimiento indicados.
+
+		</p>
+		<img src="{{ asset('Img.jpg') }}" alt="">
 	</div>
-	<div id="principal">
-		<h2>Sección Principal</h2>
-	</div>
-	<div id="terciario">
-		<form action="{{route('contactanos')}}" method="POST">
-			@csrf
-			<h2>Contáctanos</h2>
-			<label>
-				Nombre: <br>
-				<input type="text" name="nombre" required>
-			</label> <br>
-			<label>
-				Correo: <br>
-				<input type="email" name="correo" required>
-			</label> <br>
-			<label>
-				Mensaje: <br>
-				<textarea name="mensaje" rows="4" required></textarea>
-			</label>
-			<button type="submit">Enviar mensaje</button>
-		</form>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	</div>
-	@if (session('info'))
-		<script>
-			alert("{{session('info')}}");
-		</script>
-		
-	@endif
+
+
+	</main>
+	<footer class="footer">
+		<div class="container"></div>
+		<p>Derechos reservados</p>
+
+	</footer>
+</body>
 @endsection

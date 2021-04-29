@@ -1,6 +1,12 @@
 @extends('layouts.plantilla')
 
+@section('estilo')
+
+@endsection
+
 @section('contenido')
+
+
     <div id="productos">
         @foreach ($articulos as $articulo)
             @if ($articulo->condicion)
@@ -12,7 +18,7 @@
                     <div id="añadir">
                         {{-- <form action="{{route('articulos.añadir', $articulo)}}" method="POST"> --}}
                             <input type="number" name="cant">
-                            <button type="submit"><img src="https://www.flaticon.es/svg/vstatic/svg/3523/3523887.svg?token=exp=1615914261~hmac=7fea2b3d492c4557af65434258d5620f" height="25px"></button>
+                            <button type="submit"><img src="{{ asset('iconos/199-shopping-cart-1.png') }}" height="25px"></button>
                         {{-- </form> --}}
                     </div>
                 </div>

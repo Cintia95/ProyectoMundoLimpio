@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-
+	<h2> </h2><br><br>
 	<h2>Administrar Existencias</h2>
 	<div class="botones"><a href="{{route('articulos.cargar')}}" class="btn">Cargar Artículo</a> </div>
 	<br>
@@ -24,12 +24,12 @@
 					<td>${{$articulo->precio}}</td>
 					<td><img src="{{$articulo->imagen}}" height="40px"></td>
 					<td><form action="{{route('articulos.editar', $articulo)}}" method="GET">
-							<button type="submit" class="btna"><img src="https://www.flaticon.es/svg/vstatic/svg/1160/1160515.svg?token=exp=1615414001~hmac=b9d18a6f4179bf1d9cb77d51894f1317" height="25px"></button></form></td>
+							<button type="submit" class="btna"><img src="{{ asset('iconos/066-edit-1.png') }}" height="25px"></button></form></td>
 					<td>
 						<form action="{{route('articulos.eliminar', $articulo)}}" method="POST">
 							@csrf
 							@method('PUT')
-							<button type="submit" class="btna" onclick="return ConfirmDelete()"><img src="https://www.flaticon.es/svg/vstatic/svg/1214/1214926.svg?token=exp=1615414948~hmac=ac9006c6f6b2a3f41eaaabcef5ad8357" height="25px"></button>
+							<button type="submit" class="btna" onclick="return ConfirmDelete()"><img src="{{ asset('iconos/223-trash.png') }}" height="25px"></button>
 						</form>
 					</td>
 				</tr>
@@ -41,7 +41,15 @@
 	</div>
 	@if (session('info'))
 		<script>
-			alert("{{session('info')}}");
+			function ConfirmDelete(){
+        		var respuesta = confirm("¿Está seguro que desea eliminar este artículo?");
+        		if (respuesta == true){
+            		return true;
+        		}
+        		else {
+            		return false;
+        		}
+    		}
 		</script>
 		
 	@endif
